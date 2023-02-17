@@ -67,12 +67,12 @@ void ASInitializeFrameworkMainThread(void)
   dispatch_once(&onceToken, ^{
     ASDisplayNodeCAssertMainThread();
     // Ensure these values are cached on the main thread before needed in the background.
-    if (ASActivateExperimentalFeature(ASExperimentalLayerDefaults)) {
-      // Nop. We will gather default values on-demand in ASDefaultAllowsGroupOpacity and ASDefaultAllowsEdgeAntialiasing
-    } else {
-      allowsGroupOpacityFromUIKitOrNil = @(YES); // Use default values here instead of loading the layer
-      allowsEdgeAntialiasingFromUIKitOrNil = @(NO);
-    }
+//    if (ASActivateExperimentalFeature(ASExperimentalLayerDefaults)) {
+//      // Nop. We will gather default values on-demand in ASDefaultAllowsGroupOpacity and ASDefaultAllowsEdgeAntialiasing
+//    } else {
+//      allowsGroupOpacityFromUIKitOrNil = @(YES); // Use default values here instead of loading the layer
+//      allowsEdgeAntialiasingFromUIKitOrNil = @(NO);
+//    }
     ASNotifyInitialized();
 #if AS_SIGNPOST_ENABLE
     _ASInitializeSignpostObservers();
