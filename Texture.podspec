@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-  spec.name         = 'TextureUT'
+  spec.name         = 'Texture'
   spec.version      = '1.0.2'
   spec.license      =  { :type => 'Apache 2',  }
   spec.homepage     = 'http://texturegroup.org'
